@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<!-- Displays a form for the dog owner to fill his details -->
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="stylesheets/forms_table.css"> 
+	</head>
+	<body>
+	   <!-- Site's Logo -->
+	  <a href="/"><img src="/stylesheets/dog_walker_icon.png" alt="dog walker image" class="logo"></a>
+	  
+		<!-- Creates the Top Bar of the page, using CSS classes-->
+
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/newdog">Sign Up A Dog</a></li>
+		<li><a href="/choosewalker">Choose Your Walker</a></li>
+		<li><a href="/mytrips">My Trips</a></li>
+        <li class="ci"><a href="/logout" class="ci_c">Logout</a></li>
+      </ul>
+	  
+		<h1> Hello Dog Owners! </h1> 
+		<form action="/dogownerinput" method="post">
+            <table class= "trips_table" >
+
+                 <tr>
+                    <td colspan="2" class="important_title">
+						Dog Owner Registration
+					</td>
+                </tr>
+					<!-- Dog Owner Name --->
+                <tr>
+                    <td class="bold_item">
+						First Name :
+					</td>
+                    <td class="bold_item">
+						<input type="text" name="new_dogowner_first_name" class="wider">
+					</td>
+                </tr>
+
+                <tr>
+                    <td class="bold_item">
+						Last Name :
+					</td>
+                    <td class="bold_item">
+						<input type="text" name="new_dogowner_last_name" class="wider">
+					</td>
+                </tr>
+				<!-- Dog Owner Phone Number --->
+                <tr>
+                    <td class="bold_item">
+						Phone Number :
+					</td>
+                    <td class="bold_item">
+						<input type="number" name="new_dogowner_phone_number" class="wider">
+					</td>
+                </tr>
+				<!-- Dog Owner City of Residence --->
+				<tr>
+                    <td class="bold_item">
+						City of Residence :
+					</td>
+                    <td class="bold_item">
+						<select name="new_dogowner_city" class="wider">
+							<option  value="Tel-Aviv">Tel-Aviv</option>
+							<option value="Haifa">Haifa</option>
+							<option value="Jerusalem">Jerusalem</option>
+							<option value="Eilat">Eilat</option>
+							<option value="Yahud">Yahud</option>
+							<option value="Herzliya">Herzliya</option>
+							<option value="Kfar-Hess">Kfar-Hess</option>
+				
+						</select>
+					</td>
+				</tr>
+				<!-- Dog Owner Birthdate --->
+				</tr>
+				
+				<td class="bold_item">
+						Birthday:
+					</td>
+                    <td class="bold_item">
+						<input type="date" name="new_dogowner_birthdate" class="wider">
+					</td>
+				
+                </tr>
+				<!-- Dog Owner Street And House Number --->
+				</tr>
+					<td class="bold_item">
+						Street Name:
+					</td>
+                    <td class="bold_item">
+						<input type="text"  maxlength="50" name="new_dogowner_street_name" class="wider">
+					</td>
+                </tr>
+				
+				</tr>
+					<td class="bold_item">
+						House Number:
+					</td>
+                    <td class="bold_item">
+						<input type="number"  maxlength="10" name="new_dogowner_house_number" class="wider">
+					</td>
+                </tr>
+				
+				<tr>
+                    <td>
+						<input type="submit" value="Sign Up" class="important_button">  
+					</td>
+                    <td>
+					</td>
+                </tr>
+            </table>
+        </form>
+
+	</body>
+</html>
+

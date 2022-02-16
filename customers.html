@@ -1,0 +1,77 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Jan 19 11:18:07 2020
+
+@author: shirl
+"""
+
+<!DOCTYPE html>
+
+<!-- Displays a form for the dog owner to fill his details -->
+
+<html>
+	<head>
+		
+		<link rel="stylesheet" type="text/css" href="stylesheets/forms_table.css"> 
+	</head>
+	<body>
+	<table border="1">
+	 <thead>
+	<tr>
+	<th>first name</th>
+	<th>last name </th>
+	</tr>
+	</thead> 
+	<tbody>
+	 {% for customer in customers %}
+	
+	 <tr>
+     <td>{{ customer.customer_first_name }}</td>
+     <td>{{ customer.customer_last_name }}</td>
+     </tr>
+    {% endfor %}
+    </tbody>
+	 </table>
+	 	<h1> Filter Your Customers </h1>
+	<form action="/customersfilter" method="post">
+            <table class= "trips_table">
+		<tr>
+					<td class="bold_item">
+						Filter Customer According To Age And City:
+					</td>
+					</tr>
+	<tr>
+                    <td class="bold_item">
+						Age Of Owner:
+					</td>
+                    <td >
+						<input type="number" name="DogOwnerAge" class="wider">
+					</td>
+                </tr>
+	<tr>
+                    <td class="bold_item">
+						City Of Dog Owner:
+					</td>
+                    <td class="bold_item">
+						<select name="Filter_City" class="wider">
+							<option  value="Tel-Aviv">Tel-Aviv</option>
+							<option value="Haifa">Haifa</option>
+							<option value="Ramat Efal">Ramat Efal</option>
+							<option value="Jerusalem">Jerusalem</option>
+							<option value="Yahud">Yahud</option>
+							<option value="Herzliya">Herzliya</option>
+							<option value="Eilat">Eilat</option>
+				
+						</select>
+					</td>
+	<tr>
+                    <td>
+						<input type="submit" value="Filter" class="important_button">  
+					</td>
+                    <td>
+					</td>
+                </tr>
+            </table>
+        </form>
+         <br/>
+         <hr/>

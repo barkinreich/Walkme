@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<!-- Displays a form for the dog owner to fill his details -->
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="stylesheets/forms_table.css"> 
+	</head>
+	<body>
+	  
+		<!-- Creates the Top Bar of the page, using CSS classes-->
+
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li class="ci"><a href="/logout" class="ci_c">Logout</a></li>
+      </ul>
+	  
+		<h3> Hello Dog Walker!! </h3> 
+		<form action="/Dog_Walker_Input" method="post">
+            <table class= "trips_table" >
+
+                 <tr>
+                    <td colspan="2" class="important_title">
+						<h3>Please Register So You Can Enjoy Our Fantastic Service!</h3>
+					</td>
+                </tr>
+					<!-- Dog Owner Name --->
+                <tr>
+                    <td class="bold_item">
+						First Name :
+					</td>
+                    <td class="bold_item">
+						<input type="text" name="W_First_Name" class="wider">
+					</td>
+                </tr>
+
+                <tr>
+                    <td class="bold_item">
+						Last Name :
+					</td>
+                    <td class="bold_item">
+						<input type="text" name="W_Last_Name" class="wider">
+					</td>
+                </tr>
+				<!-- Dog Owner Phone Number --->
+                <tr>
+                    <td class="bold_item">
+						Phone Number :
+					</td>
+                    <td class="bold_item">
+						<input type="number" name="W_Phone_Number" class="wider">
+					</td>
+                </tr>
+				<!-- Dog Owner City of Residence --->
+				<tr>
+                    <td class="bold_item">
+						City of Residence :
+					</td>
+                    <td class="bold_item">
+						<select name="W_City" class="wider">
+							<option  value="Tel-Aviv">Tel-Aviv</option>
+							<option value="Haifa">Haifa</option>
+							<option value="Jerusalem">Jerusalem</option>
+							<option value="Eilat">Eilat</option>
+							<option value="Yahud">Yahud</option>
+							<option value="Herzliya">Herzliya</option>
+							<option value="Kfar-Hess">Kfar-Hess</option>
+				
+						</select>
+					</td>
+				</tr>
+				<!-- Dog Owner Birthdate --->
+				</tr>
+				
+
+				
+                </tr>
+				<!-- Dog Owner Street And House Number --->
+				</tr>
+					<td class="bold_item">
+						Street Name:
+					</td>
+                    <td class="bold_item">
+						<input type="text"  maxlength="50" name="W_Street" class="wider">
+					</td>
+                </tr>
+				
+				</tr>
+					<td class="bold_item">
+						House Number:
+					</td>
+                    <td class="bold_item">
+						<input type="number"  maxlength="10" name="W_House_Number" class="wider">
+					</td>
+                </tr>
+				
+			
+								<tr>
+				
+				
+                <td class="bold_item">
+						 <h3> Work Days : </h3>
+				</td>
+                <td class="bold_item">
+					<input type="checkbox" name="new_dogwalker_workdays" class="wider"
+						value="Sunday">Sunday<br>	
+					<input type="checkbox" name="new_dogwalker_workdays" class="wider"
+						value="Monday">Monday<br>	
+					<input type="checkbox" name="new_dogwalker_workdays" class="wider"
+						value="Tuesday">Tuesday<br>	
+					<input type="checkbox" name="new_dogwalker_workdays" class="wider"
+						value="Wednesday">Wednesday<br>	
+					<input type="checkbox" name="new_dogwalker_workdays" class="wider"
+						value="Thursday">Thursday<br>	
+					<input type="checkbox" name="new_dogwalker_workdays" class="wider"
+						value="Friday">Friday<br>	
+					<input type="checkbox" name="W_Work_days_List" class="wider"							value="Saturday">Saturday<br>								
+				</td>
+                </tr>
+				
+                <td class="bold_item">
+						<h3> Which dog breeds are you willing to walk ? hello {{hello}}</h3>
+				</td>
+                   <td class="bold_item">
+					<input type="checkbox" name="W_breeds" class="h3"
+						value="Amstaff">Amstaff<br>
+					<input type="checkbox" name="W_breeds" class="h3
+						value="Beagle">Beagle<br>
+					<input type="checkbox" name="W_breeds"
+							value="Doberman">Doberman<br>
+					<input type="checkbox" name="W_breeds" class="h3"
+						value="Golden Retriever">Golden Retriever<br>
+					<input type="checkbox" name="W_breeds"
+						value="Labrador">Labrador<br>
+					<input type="checkbox" name="W_breeds" class="h3"
+						value="Rottweiler">Rottweiler<br>
+					<input type="checkbox" name="W_breeds"
+						value="Shih Tzu">Lavrador<br>
+				</td>
+                </tr>
+				
+				
+				<tr>
+                    <td>
+						<input type="submit" value="Sign Up" class="important_button">  
+					</td>
+                    <td>
+					</td>
+                </tr>
+				
+				
+				
+				
+				
+				
+            </table>
+        </form>
+
+	</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<!-- Displays a form for the dog owner to fill his details -->
+
+<html>
+	<head>
+		
+		<link rel="stylesheet" type="text/css" href="stylesheets/forms_table.css"> 
+	</head>
+	<body>
+		<!-- Creates the Top Bar of the page, using CSS classes-->
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li class="ci"><a href="/logout" class="ci_c">Logout</a></li>
+      </ul>
+	  
+		<p class="title"> Hello Dog Owners! </p> 
+		<form action="/Dog_Owner_Input" method="post">
+            <table class= "trips_table" >
+
+                 <tr>
+                    <td colspan="2" class="important_title">
+						<p> Dog Owner Registration </p>
+					</td>
+                </tr>
+					<!-- Dog Owner Name --->
+                <tr>
+                    <td class="bold_item">
+						First Name :
+					</td>
+                    <td class="bold_item">
+						<input type="text" name="O_First_Name" class="wider">
+					</td>
+                </tr>
+
+                <tr>
+                    <td class="bold_item">
+						Last Name :
+					</td>
+                    <td class="bold_item">
+						<input type="text" name="O_Last_Name" class="wider">
+					</td>
+                </tr>
+				<!-- Dog Owner Phone Number --->
+                <tr>
+                    <td class="bold_item">
+						Phone Number :
+					</td>
+                    <td class="bold_item">
+						<input type="number" name="O_Phone_Number" class="wider">
+					</td>
+                </tr>
+				<!-- Dog Owner City of Residence --->
+				<tr>
+                    <td class="bold_item">
+						City of Residence :
+					</td>
+                    <td class="bold_item">
+						<select name="O_City" class="wider">
+							<option  value="Tel-Aviv">Tel-Aviv</option>
+							<option value="Haifa">Haifa</option>
+							<option value="Ramat Efal">Ramat Efal</option>
+							<option value="Jerusalem">Jerusalem</option>
+							<option value="Yahud">Yahud</option>
+							<option value="Herzliya">Herzliya</option>
+							<option value="Eilat">Eilat</option>
+				
+						</select>
+					</td>
+				</tr>
+				<!-- Dog Owner Birthdate --->
+				<tr>
+				
+				<td class="bold_item">
+						Birthdate:
+					</td>
+                    <td class="bold_item">
+						<input type="date" name="O_Birth_Date" class="wider">
+					</td>
+				
+                </tr>
+                <tr>
+                <td class="bold_item">
+						Dog breeds you're willing to take care of:
+					</td>
+                    <td class="bold_item">
+                    <table border="1">
+                    <thead>
+                        <tr>
+                        <th>Name</th>
+                        <th>Avg</th>
+                        </tr>                    
+                    </thead>
+                    <tbody>
+                    {% for dog_breed in dog_breeds %}
+                        <tr>
+                            <td>{{ dog_breed.Name_Of_Breed }}</td>
+                            <td>{{ dog_breed.Avg_Height }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                    </table>
+                    
+						{% for dog_breed in dog_breeds %}
+            				<input type="checkbox" name="breeds" class="h3" value="{{ dog_breed.Name_Of_Breed }}">{{ dog_breed.Name_Of_Breed }}<br>
+						{% endfor %}
+					</td>
+                </tr>
+				<!-- Dog Owner Street And House Number --->
+				<tr>
+					<td class="bold_item">
+						Street Name:
+					</td>
+                    <td class="bold_item">
+						<input type="text"  maxlength="50" name="O_Street" class="wider">
+					</td>
+                </tr>
+				
+				<tr>
+					<td class="bold_item">
+						House Number:
+					</td>
+                    <td class="bold_item">
+						<input type="number"  maxlength="10" name="O_House_Number" class="wider">
+					</td>
+                </tr>
+				
+				<tr>
+                    <td>
+						<input type="submit" value="Sign Up" class="important_button">  
+					</td>
+                    <td>
+					</td>
+                </tr>
+            </table>
+        </form>
+	</body>
+</html>

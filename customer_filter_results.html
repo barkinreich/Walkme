@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!-- Displays a list of all avilable customers in an HTML table -->
+<html>
+	<head>
+		
+		<link rel="stylesheet" type="text/css" href="stylesheets/forms_table.css"> 
+		<h1 class="important_title"> Here Are All Your Customers (Filtered) </h1> 
+		<form action="/customers" method="post">
+		 <h2 class="important_title"> Customers: </h2>
+        <table class="trips_table" border="1">>
+		
+			<!--Display the Filtered Owners---->
+
+            <tr class="bold_item"/>
+                <td> First Name </td>
+				<td> Last Name </td> 
+				<td> Phone Number </td>
+				<td> City </td>
+
+            </tr>
+			<!--All the Filtered Owners-->
+            {% for Owner in new_customer_results %}
+				<tr class="bold_item">
+					<td>{{Owner.O_First_Name}} </td>
+					<td>{{Owner.O_Last_Name }} </td>
+					<td>{{Owner.O_Phone_Number }} </td>
+					<td>{{Owner.O_City }} </td>
+				</tr>
+			{% endfor %}
+			
+	</table>
+	
+	<a class='important button' href="/customers"> Filter Again!</a>
+
+</html>
